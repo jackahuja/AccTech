@@ -1,0 +1,20 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            nav.classList.add('shadow');
+        } else {
+            nav.classList.remove('shadow');
+        }
+    });
+
+    // Form Submission Placeholder (for contact pages)
+    const contactForm = document.querySelector('#contactForm');
+    if(contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Our experts will contact you shortly.');
+        });
+    }
+});
